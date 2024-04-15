@@ -29,11 +29,11 @@ const state = ref({
 });
 const users = getAllUsers();
 const hanldeForm = (event: FormSubmitEvent<z.output<typeof Validation>>) => {
-  const id = Math.floor(Math.random()*1000).toString();
+  const id: string = Math.floor(Math.random() * 1000).toString();
   event.data.id = id;
+  createUser();
   const newUser = ref(event.data);
   users.value.push(newUser.value);
-  console.log(users.value);
   state.value = {
     id: "",
     name: "",

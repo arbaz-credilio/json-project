@@ -30,9 +30,8 @@
 <script setup lang="ts">
 const users = getAllUsers();
 const value: Ref<string> = ref("");
-const formOpen: Ref<boolean> = ref(false);
 const showUsers = computed(() => {
-  return users?.value.filter((each: any) => {
+  return users.value && users?.value.filter((each: any) => {
     return each?.name.toLowerCase().includes(value.value.toLowerCase());
   });
 });

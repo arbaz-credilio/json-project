@@ -17,12 +17,15 @@
 </template>
 
 <script setup lang="ts">
+// import { deleteUser } from '~/composables/deleteUser';
+
 let users = getAllUsers();
 const route = useRoute();
 const id: string | string[] = route.params.id;
 const user = users.value.find((each: any) => each.id.toString() === id);
 
 const deleteAndNavigate = (id: string | string[]) => {
+  deleteUser(id)
   users.value = users.value.filter((each: any) => {
     return each?.id.toString() !== id;
   });
