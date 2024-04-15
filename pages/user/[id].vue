@@ -38,3 +38,7 @@ const deleteAndNavigate = (id: string | string[]) => {
   }, 2000);
 };
 </script>
+
+function getAllUsers() {
+  throw new Error("Function not implemented.");
+}
