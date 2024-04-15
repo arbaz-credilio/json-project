@@ -18,7 +18,6 @@
 </template>
 
 <script setup lang="ts">
-// import { deleteUser } from '~/composables/deleteUser';
 const snackbar = useSnackbar();
 let users = getAllUsers();
 const route = useRoute();
