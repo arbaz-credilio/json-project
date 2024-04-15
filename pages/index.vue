@@ -23,8 +23,8 @@
     <UButton color="blue" @click="isFormOpen = !isFormOpen">{{
       isFormOpen ? "close" : "Create User"
     }}</UButton>
-  </UContainer
-  >
+  </UContainer>
+  
 </template>
 
 <script setup lang="ts">
